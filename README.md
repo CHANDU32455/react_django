@@ -50,21 +50,13 @@ Now, you need to modify your App.js to include a form with multiple textarea ele
 ```javascript
 import VirtualKeyboard from './components/VirtualKeyboard'; // Adjust path accordingly
 ```
-### 6. Testing the Virtual Keyboard
-In this setup, when you click on any textarea, it becomes the "focused" input field, and the virtual keyboard will update that field with the key that you click. You can test the keyboard by typing or clicking on the textarea fields.
-#### Individual field test
-<img src="vKeyboard/tests/test1.png" alt="Test Image 1" width="500"/>
-
-#### Entire form test
-<img src="vKeyboard/tests/test2.png" alt="Test Image 2" width="500"/>
-
-### 7. Importing and Using the Keyboard
+### 6. Importing and Using the Keyboard
 Once the components are set up correctly, you can import and use the VirtualKeyboard with a single line in your App.js or any other component where you want the virtual keyboard to be used:
 
 ```jsx
 <VirtualKeyboard onChange={(value) => handleInputChange(focusedIndex, value)} focusedIndex={focusedIndex} />
 ```
-### 8. Project Structure Overview
+### 7. Project Structure Overview
 Here’s a summary of the project structure for reference:
 
 ``` Structure
@@ -78,7 +70,14 @@ Here’s a summary of the project structure for reference:
   package.json
   README.md
 ```
-### 9. Considerables:
+### Final Steps: Start the Server
+
+Once everything is set up, it's time to start the server and run your application. In the project directory, run the following command:
+
+```bash
+npm start
+```
+### 8. Considerables:
 In order to use the virtual keyboard effectively, make sure you follow these steps to ensure the keyboard works when the input field is focused:
 **Track Focused Field**: 
    You need to identify which input field (textarea) is currently focused. This is done using the `onFocus` event. When the user clicks on any textarea, it becomes the active field, and the virtual keyboard will update that specific field.
@@ -98,6 +97,14 @@ focus on
 ```jsx
    onFocus={() => setFocusedIndex(index)} // Set which field is focused
 ```
+### 9. Testing the Virtual Keyboard
+In this setup, when you click on any textarea, it becomes the "focused" input field, and the virtual keyboard will update that field with the key that you click. You can test the keyboard by typing or clicking on the textarea fields.
+#### Individual field test
+<img src="vKeyboard/tests/test1.png" alt="Test Image 1" width="500"/>
+
+#### Entire form test
+<img src="vKeyboard/tests/test2.png" alt="Test Image 2" width="500"/>
+
 ### 10. Conclusion
 
 #### Usage
@@ -107,14 +114,8 @@ Example of usage in your app:
 
 ```jsx
 <VirtualKeyboard
-  onChange={(value) => handleInputChange(focusedIndex, value)} // Update the focused field
   focusedIndex={focusedIndex} // Track which field is focused
+  onChange={(value) => handleInputChange(focusedIndex, value)} // Update the focused field
 />
 ```
-### Final Steps: Start the Server
 
-Once everything is set up, it's time to start the server and run your application. In the project directory, run the following command:
-
-```bash
-npm start
-```
