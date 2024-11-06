@@ -81,6 +81,21 @@ focus on
    onFocus={() => setFocusedIndex(index)} // Set which field is focused
 ```
 ### 10. Conclusion
-Usage: Simply import the VirtualKeyboard component and use it in your app with the provided props. The onChange function should be linked to your input field, and       focusedIndex will track which field is being updated.
 
-Customization: You can modify the keyboard layout, add more keys, or change the visual design to fit your needs.
+#### Usage
+Simply import the `VirtualKeyboard` component and use it in your app with the provided props. The `onChange` function should be linked to your input field, and the `focusedIndex` will track which field is being updated.
+
+Example of usage in your app:
+
+```jsx
+<VirtualKeyboard
+  onChange={(value) => handleInputChange(focusedIndex, value)} // Update the focused field
+  focusedIndex={focusedIndex} // Track which field is focused
+/>
+```
+### Final Steps: Start the Server
+
+Once everything is set up, it's time to start the server and run your application. In the project directory, run the following command:
+
+```bash
+npm start
