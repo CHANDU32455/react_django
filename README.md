@@ -3,6 +3,7 @@
 ``click on top left keyboard icon to toggle keyboard.``
 
 <img src="vKeyboard/tests/result.png" alt="Test Image 1" width="300"/>
+
 ### Project Setup and Integration Guide
 
 This guide will walk you through setting up a React project with a virtual keyboard component that can be easily bound to any input field (like a textarea). The virtual keyboard can handle key events and update the values of the associated input fields dynamically.
