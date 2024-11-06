@@ -33,10 +33,14 @@ You can create a components folder and place the VirtualKeyboard.js component in
 
 ### 4. VirtualKeyboard Component
 The VirtualKeyboard.js file contains the virtual keyboard logic. It listens for key events and updates the value of the textarea field dynamically.
-
+```javascript
+import keyboard_image from './assets/images/keyboard.png';   // Adjust path if necessary, keeping the image name the same
+```
 ### 5. Updating App.js
 Now, you need to modify your App.js to include a form with multiple textarea elements, and bind them to the virtual keyboard.
-
+```javascript
+import VirtualKeyboard from './components/VirtualKeyboard'; // Adjust path if necessary
+```
 ### 6. Testing the Virtual Keyboard
 In this setup, when you click on any textarea, it becomes the "focused" input field, and the virtual keyboard will update that field with the key that you click. You can test the keyboard by typing or clicking on the textarea fields.
 
@@ -99,3 +103,4 @@ Once everything is set up, it's time to start the server and run your applicatio
 
 ```bash
 npm start
+```
