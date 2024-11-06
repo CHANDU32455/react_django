@@ -1,4 +1,8 @@
 # Virtual Keyboard React Integration
+
+``click on top left keyboard icon to toggle keyboard.``
+
+<img src="vKeyboard/tests/result.png" alt="Test Image 1" width="300"/>
 ## Project Setup and Integration Guide
 
 This guide will walk you through setting up a React project with a virtual keyboard component that can be easily bound to any input field (like a textarea). The virtual keyboard can handle key events and update the values of the associated input fields dynamically.
@@ -9,6 +13,10 @@ Make sure you have Node.js and npm installed. To create a new React app, run the
 ```bash
 npx create-react-app appname
 ```
+
+considering frontend being my appname
+
+<img src="vKeyboard/tests/ps2.png" alt="Test Image 1" height="300"/>
 
 ### 2. Setting Up the Project
 Once the project is created, navigate to your project directory:
@@ -34,15 +42,20 @@ You can create a components folder and place the VirtualKeyboard.js component in
 ### 4. VirtualKeyboard Component
 The VirtualKeyboard.js file contains the virtual keyboard logic. It listens for key events and updates the value of the textarea field dynamically.
 ```javascript
-import keyboard_image from './assets/images/keyboard.png';   // Adjust path if necessary, keeping the image name the same
+import keyboard_image from './assets/images/keyboard.png';   // better same image name , Adjust path accordingly
 ```
 ### 5. Updating App.js
 Now, you need to modify your App.js to include a form with multiple textarea elements, and bind them to the virtual keyboard.
 ```javascript
-import VirtualKeyboard from './components/VirtualKeyboard'; // Adjust path if necessary
+import VirtualKeyboard from './components/VirtualKeyboard'; // Adjust path accordingly
 ```
 ### 6. Testing the Virtual Keyboard
 In this setup, when you click on any textarea, it becomes the "focused" input field, and the virtual keyboard will update that field with the key that you click. You can test the keyboard by typing or clicking on the textarea fields.
+#### Individual field test
+<img src="vKeyboard/tests/test1.png" alt="Test Image 1" width="500"/>
+
+#### Entire form test
+<img src="vKeyboard/tests/test2.png" alt="Test Image 2" width="500"/>
 
 ### 7. Importing and Using the Keyboard
 Once the components are set up correctly, you can import and use the VirtualKeyboard with a single line in your App.js or any other component where you want the virtual keyboard to be used:
